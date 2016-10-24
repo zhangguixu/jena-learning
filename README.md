@@ -9,7 +9,15 @@
 1. [rdf](./notes/rdf.md)
 2. ontology
 3. sparql
-4. tdb
+4. [tdb](./notes/tdb.md)
 5. fuseki
+
+## 学习资料汇总
+
+1. [Jena官网](http://jena.apache.org/index.html)
+2. [sparql](https://www.w3.org/TR/sparql11-query/)
+3. [如何在ecplise中使用Jena](http://www.iandickinson.me.uk/articles/jena-eclipse-helloworld/)
+4. [Jena资料整理博客](http://www.itdadao.com/tags/jena-0.html)
+5. [Jena API文档](http://jena.apache.org/documentation/javadoc/jena/)
 
 2016-10-21
