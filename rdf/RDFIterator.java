@@ -1,5 +1,6 @@
+package rdf;
+
 import org.apache.jena.rdf.model.*;
-import org.apache.jena.vocabulary.VCARD;
 
 public class RDFIterator {
 
