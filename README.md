@@ -8,9 +8,14 @@
 
 1. [rdf](./notes/rdf.md)
 2. ontology
-3. sparql
-4. [tdb](./notes/tdb.md)
-5. fuseki
+3. ARQ
+4. Fuseki
+5. SPARQL
+6. [tdb](./notes/tdb.md)
+
+## Jena的整体web流程框架
+
+![jena-complete](./images/jena-webflow.jpg)
 
 ## 学习资料汇总
 
