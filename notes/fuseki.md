@@ -70,3 +70,107 @@ fuseki-server
 Fuseki可以作为操作系统的一个服务来运行，并且设置开机启动，在解压的文件中有一个fuseki的搅拌，它其实是一个linux的init.d，可以将fuseki配置到开机启动中。
 
 运行时，进程的参数会从`/etc/default/fuseki`包括`FUSEKI_HOME`和`FUSEKI_BASE`中读取。
+
+## 3. SOH(SPARQL over HTTP)
+
+从解压的文件中，在bin目录下，还提供了
+
+![soh-scripts](../images/soh-scripts.png)
+
+这些其实就是SOH（SPARQL over HTTP）的命令行工具，我们可以通过这些命令行工具来进行SPARQL的查询，通信是基于HTTP协议。
+
+[英文文档SOH](http://jena.apache.org/documentation/fuseki2/soh.html)
+
+由于这些脚本都是采用ruby编写的，因此必须在电脑上先安装ruby，然后配置环境变量，使其能够在cmd中直接运行ruby命令。
+
+来个示例，首先，我们先启动fuseki
+
+![fuseki-database-test.png](../images/fuseki-database-test.png)
+
+可以看到我们在上一节配置的数据集test。
+
+### 3.1 直接查询
+
+```shell
+ruby s-query --service=endpointURL 'query string'
+ruby s-query --server=endpointURL --query=queryFile.rq
+```
+
+在上面搭建的环境下，endpointURL可以在query的页面上查询到，即
+
+![s-query-endpointURL.png](../images/s-query-endpointURL.png)
+
+我们需要切换到bin目录下，在该目录下，我们新建一个query的脚本文件`testquery.rq`，内容为：
+
+```sql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?subject ?predicate
+WHERE {
+  ?subject  ?predicate "John Smith"
+}
+LIMIT 25
+```
+
+然后执行脚本
+
+```shell
+ruby s-query --server=http://localhost:3030/test/query --query=testquery.rq
+```
+
+执行结果为（返回的是json数据）
+
+![s-query-result.png](../images/s-query-result.png)
+
+### 3.2 简易的http操作命令
+
+在这里必须介绍一下[SPARQL Graph Store Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/#introduction)这个协议，大致就是通过HTTP头部的操作方法来对RDF的数据模型进行更新操作，示意图如下：
+
+![RDF-graph-protocol-model](../images/RDF-graph-protocol-model.jpg)
+
+SOH同样提供了脚本，使其能够便捷地对数据模型进行更新，有
+
+* s-get
+* s-post
+* s-put
+* s-delete
+
+脚本语法为（在window环境下同样要加ruby）
+
+```shell
+s-VERB databaseURI grapName [file]
+```
+
+在fuseki的UI页面对应地有`edit`，可以对模型进行操作
+
+![fuseki-edit.png](../images/fuseki-edit.png)
+
+需要注意的是，语法中的`databaseURI`对应的操作有不同的URI，可以在页面中的`info`栏下查看到：
+
+![fuseki-info.png](../images/fuseki-info.png)
+
+我们直接在命令行对其进行操作(示例)，
+
+```shell
+# 获取rdf graph
+ruby s-get http://localhost:3030/test/get default > graph
+```
+
+打开graph文件，内容与edit页面的编辑框的内容是一致，同为
+
+![s-get-graph.png](../images/s-get-graph.png)
+
+### 3.3 update操作
+
+我们可以在edit页面上直接编辑操作，也可以使用`s-upadte`来对数据进行更新操作
+
+```shell
+s-update --service=endpointURL 'update string'
+s-update --service=endpointURL --update=updateFile.ru
+```
+
+
+
+
+
+
+
