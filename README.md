@@ -9,9 +9,9 @@
 1. [rdf](./notes/rdf.md)
 2. ontology
 3. ARQ
-4. Fuseki
-5. SPARQL
-6. [tdb](./notes/tdb.md)
+4. [Fuseki](./notes/fuseki.md)
+5. [SPARQL](./notes/sparql.md)
+6. [TDB](./notes/tdb.md)
 
 ## Jena的整体web流程框架
 
