@@ -4,7 +4,7 @@
 
 ![jena](./images/jena.png)
 
-## 目录
+## 概述
 
 1. [rdf](./notes/rdf.md)
 2. ontology
