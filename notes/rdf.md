@@ -99,6 +99,8 @@ RDF用RDFs语言定义词表：
 2. `prefix`则是定义一个命名空间前缀。
 3. `a foaf:Person`中，谓词a是属性`rdf:type`的速写，表示实例关系。
 
+*文件后缀为ttl*
+
 ### 3.3 TriG(Turtle的扩展)
 
 每个图中的三元组用花括号括起来，其他的句法与Turtle一直，关键词`Graph`可选，可以提高可读性。
