@@ -1,0 +1,6 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+DELETE { ?person foaf:name ?name }
+WHERE {
+  <http://www.example.org/alice#me> foaf:knows ?person .
+  ?person foaf:name ?name FILTER ( lang(?name) = "EN" ) .
+}
