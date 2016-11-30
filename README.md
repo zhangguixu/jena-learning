@@ -42,3 +42,4 @@
 8. [Jena的Ontology学习](http://blog.csdn.net/zhang6560329/article/details/27095197)
 9. [Protégé中文教程](http://wenku.baidu.com/link?url=5Wb66TcG8jSBImBTIxriCUp6KaYd6sLZ20SS4emUgjyVs14GegIVKmGVlM7CSs56p0eQ6vpHnlph3eGgUsKHmsma8GREPc-iPR9cRDwHmLW)
 10. [Protégé构建本体教程](http://wenku.baidu.com/link?url=TcDAyKe0DzP38i6sGG70s8P4lCvaQ5RptO1iuX1n1ljPtIluBloeu4NfJVi1sFQVBeJ0O1d2I4U9_9RDa3n5jtlcB5eSVuFMioQvnEgConG)
+11. [rdf数据模型下载](http://semanticweb.org/wiki/Main_Page.html)
