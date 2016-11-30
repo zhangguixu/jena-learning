@@ -39,6 +39,6 @@
 5. [Jena API文档](http://jena.apache.org/documentation/javadoc/jena/)
 6. [OWL](https://www.w3.org/TR/2004/REC-owl-features-20040210/)
 7. [owl本体语言学习笔记](http://blog.sina.com.cn/s/blog_6a7447840100utms.html)
-8. [](http://blog.csdn.net/zhang6560329/article/details/27095197)
+8. [Jena的Ontology学习](http://blog.csdn.net/zhang6560329/article/details/27095197)
 9. [Protégé中文教程](http://wenku.baidu.com/link?url=5Wb66TcG8jSBImBTIxriCUp6KaYd6sLZ20SS4emUgjyVs14GegIVKmGVlM7CSs56p0eQ6vpHnlph3eGgUsKHmsma8GREPc-iPR9cRDwHmLW)
 10. [Protégé构建本体教程](http://wenku.baidu.com/link?url=TcDAyKe0DzP38i6sGG70s8P4lCvaQ5RptO1iuX1n1ljPtIluBloeu4NfJVi1sFQVBeJ0O1d2I4U9_9RDa3n5jtlcB5eSVuFMioQvnEgConG)

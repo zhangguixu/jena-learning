@@ -1,59 +1,31 @@
-// Package
-///////////////
 package ontology;
 
-
-// Imports
-///////////////
-import org.apache.jena.ontology.*;
+import org.apache.jena.ontology.OntClass;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
 
-
-/**
- * <p>
- * Execution wrapper for class hierarchy example
- * </p>
- */
 public class Main {
-    // Constants
-    //////////////////////////////////
 
-    // Static variables
-    //////////////////////////////////
+    public static  void  main (String[]args) {
 
-    // Instance variables
-    //////////////////////////////////
+        // 创建使用OWL语言的内存模型
+        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 
-    // Constructors
-    //////////////////////////////////
+        // 加载模型
+        ontModel.read("/data/Creatrue.owl");
 
-    // External signature methods
-    //////////////////////////////////
+        // 定义一个类作为模型中的Animal类的等价类
+        OntClass cls = ontModel.createClass("DongWuClass");
+        cls.addComment("the EquivalentClass of Animal..", "EN");
 
-    public static void main( String[] args ) {
-        OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM, null );
+        // 通过完整的URI取得模型中的Animal类
+        OntClass oc = ontModel.getOntClass("http://www.semanticweb.org/zhang/ontologies/2016/10/untitled-ontology-6#Animal");
 
-        // we have a local copy of the wine ontology
-        m.getDocumentManager().addAltEntry( "http://www.w3.org/2001/sw/WebOnt/guide-src/wine",
-                "data/wine.owl" );
-        m.getDocumentManager().addAltEntry( "http://www.w3.org/2001/sw/WebOnt/guide-src/wine.owl",
-                "data/wine.owl" );
-        m.getDocumentManager().addAltEntry( "http://www.w3.org/2001/sw/WebOnt/guide-src/food",
-                "data/food.owl" );
-        m.getDocumentManager().addAltEntry( "http://www.w3.org/2001/sw/WebOnt/guide-src/food.owl",
-                "data/food.owl" );
+        oc.addEquivalentClass(cls);
 
-        m.read( "http://www.w3.org/2001/sw/WebOnt/guide-src/wine" );
 
-        new ClassHierarchy().showHierarchy( System.out, m );
+
     }
-
-
-    // Internal implementation methods
-    //////////////////////////////////
-
-    //==============================================================================
-    // Inner class definitions
-    //==============================================================================
 
 }
