@@ -46,9 +46,9 @@ TBD).
 
 ```xml
 <rdf:RDF 
-    xmlns     ="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#" 
+    xmlns ="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#" 
     xmlns:vin ="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#"       
-    xml:base  ="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#"       
+    xml:base="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#"       
     xmlns:food="http://www.w3.org/TR/2004/REC-owl-guide-20040210/food#"    
     xmlns:owl ="http://www.w3.org/2002/07/owl#"
     xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -56,6 +56,82 @@ TBD).
     xmlns:xsd ="http://www.w3.org/2001/XMLSchema#">
 </rdf:RDF>
 ```
+
+属性值不具有命名空间，在OWL里可以写出它们的完整URI，完整的URI可以利用实体定义来简略。
+
+```xml
+<!DOCTYPE rdf:RDF [
+    <!ENTITY vin  "http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#" >
+    <!ENTITY food "http://www.w3.org/TR/2004/REC-owl-guide-20040210/food#" > ]>
+```
+
+上面的命名空间就可以简写成为：
+
+```xml
+<rdf:RDF 
+    xmlns     ="&vin;" 
+    xmlns:vin ="&vin;" 
+    xml:base  ="&vin;" 
+    xmlns:food="&food;"
+    xmlns:owl ="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd ="http://www.w3.org/2001/XMLSchema#">
+ </rdf:RDF>
+```
+
+### 2.2 本体头部
+
+在`owl:Ontology`标签中给出本体的声明。来看一个例子：
+
+```xml
+<owl:Ontology rdf:about=""> 
+  <rdfs:comment>An example OWL ontology</rdfs:comment>
+  <owl:priorVersion rdf:resource="http://www.w3.org/TR/2003/PR-owl-guide-20031215/wine"/> 
+  <owl:imports rdf:resource="http://www.w3.org/TR/2004/REC-owl-guide-20040210/food"/> 
+  <rdfs:label>Wine Ontology</rdfs:label>
+</owl:Ontology>
+```
+
+其中
+
+* `owl:Ontology`标签内收集了文档的OWL元数据。
+* `rdf:about`属性为本体提供一个名称或引用。当值为""时，表示本体的名称为base URI。
+* `rdfs:comment`用于描述本体。
+* `owl:priorVersion`为本体版本控制提供相关信息的标准标签。
+* `owl:imports`提供一种嵌入机制，接受一个用`rdf:resource`属性标识的参数。
+
+## 3. 基本元素
+
+大多数OWL本体的元素都是关于
+
+* classes
+* properties
+* instances of classes
+* relationships between instances
+
+### 3.1 简单的类（Classes）和个体（Individuals）
+
+`extension(外延)`：属于某个类的个体所构成的集合为该类的外延。
+
+
+#### 3.1.1 简单的命名类
+
+一个领域中最基本的概念对应各个分类层次树的根。
+
+在OWL中，每一个个体都是类`owl:Thing`的成员（基类，类似于Java中的Object）。因此每个自定义的类都是`owl:Thing`的子类。
+
+在OWL中，可以通过`owl:Nothing`来定义一个空的类。
+
+特定领域的根类可以通过声明一个命名类来定义。
+
+```xml
+<owl:Class rdf:ID="Winery" />
+<owl:Class rdf:ID="Region"/> 
+<owl:Class rdf:ID="ConsumableThing"/> 
+```
+
+
 
 
 
