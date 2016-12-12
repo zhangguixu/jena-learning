@@ -10,18 +10,23 @@
 
     * [rdf graph](./notes/rdf-graph.md)
 
-2. ontology
+2. Ontology
 
     * [owl](./notes/owl.md)
     * [Protégé](./notes/protege.md)
+    
+3. Inference subsystem
 
-3. ARQ
-4. [Fuseki](./notes/fuseki.md)
-5. [SPARQL](./notes/sparql.md)
+    * [inference](./notes/inference.md)
+    * [reasoner](./notes/reasoner.md)
+
+4. ARQ
+5. [Fuseki](./notes/fuseki.md)
+6. [SPARQL](./notes/sparql.md)
 
     * [w3c sparql query 2013文档翻译](./notes/sparql/)
 
-6. [TDB](./notes/tdb.md)
+7. [TDB](./notes/tdb.md)
 
     * [TDB Assembler](./notes/tdb-assember.md)
     * [TDB Dynamic Datasets](./notes/tdb-dynamic-dataset.md)
