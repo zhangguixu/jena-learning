@@ -1,0 +1,2 @@
+[transitiveRule: (?A demo:p ?B),(?B demo:p ?C) -> (?A demo:p ?C) ]
+[symmetricRule: (?Y demo:p ?X) -> (?X demo:p ?Y) ]

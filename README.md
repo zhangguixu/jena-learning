@@ -35,6 +35,20 @@
 
 ![jena-complete](./images/jena-webflow.jpg)
 
+
+## 代码示例
+
+建议使用[Intellij IDEA](http://www.jetbrains.com/idea/#chooseYourEdition)，安装社区版即可。
+
+1. 需要下载[jena](http://jena.apache.org/download/index.cgi)，解压之后，在项目中引入jena的包（在解压目录下的lib，全部引入）
+2. 需要Java 8，
+
+示例：
+
+1. [RDF API](./rdf)
+2. [Ontology API](./ontology)
+3. [Inference API](./inference)
+
 ## 学习资料汇总
 
 1. [Jena官网](http://jena.apache.org/index.html)
