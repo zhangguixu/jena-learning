@@ -2,6 +2,21 @@
 
 ## 1. 简介
 
- ARQ是指`A query engine for Jena, implementing SPARQL`。也就是说在Jena中，涉及RDF查询的，都在这个模块中。
+ ARQ是Jena中的一个SPARQL查询的处理器，支持：
  
- 此外这个模块还提供了多种数据的转换，例如json等，并且提供远程SPARQL的查询接口。
+ 1. 标准的SPARQL查询
+ 2. 文本搜索（Lucene）
+ 3. SPARQL中的更新操作
+ 4. 支持SPARQL代数？
+ 5. 支持自定义filter函数
+ ...
+
+ SPARQL algebra
+ 
+ 
+## 2. SPARQL查询API
+
+![完整示例](../arq/QueryExample.java)
+
+
+

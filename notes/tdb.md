@@ -8,7 +8,33 @@ TDB中提供`事务(transaction)`的机制，可以保证数据安全地进行�
 
 在Fuseki中，内置了TDB进行数据存储和SPARQL的查询。
 
-TDB感觉是一个内存数据库？
+
+### 1.1 入门基本操作
+
+1. 构建TDB数据库
+2. 连接TDB数据库
+3. 进行事务操作
+
+![完整示例](../tdb/TDBDatasetExample.java)
+
+### 1.2 批量导入Bulkloader
+
+我们可以使用`Bulkloader`来批量导入数据，在Jena中提供了命令行工具tdbloader来实现
+
+```shell
+tdbloader.bat --loc database[tdb数据库目录] rdfFile[要导入的数据的文件名]
+```
+
+运行1.1的示例之后，我们会在根目录下创建一个TDB数据库（dataset目录下），我们使用命令行工具目录下的`sparql-example.ttl`文件数据导入到dataset数据中。
+
+
+![tdb-01](../images/tdbloader.png)
+
+导入之后，再运行1.1示例中的TDBDatasetExample.connect()，打印出数据
+
+![tdb-02](../images/tdbloader-results.png)
+
+我们在数据集上运行查询语句，[完整示例](../tdb/TDBQueryExample.java)
 
 ## 2. TDB的设计
 

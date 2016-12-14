@@ -20,7 +20,7 @@
     * [inference](./notes/inference.md)
     * [reasoner](./notes/reasoner.md)
 
-4. ARQ
+4. [ARQ](./notes/arq.md)
 5. [Fuseki](./notes/fuseki.md)
 6. [SPARQL](./notes/sparql.md)
 
@@ -48,6 +48,8 @@
 1. [RDF API](./rdf)
 2. [Ontology API](./ontology)
 3. [Inference API](./inference)
+4. [ARQ](./arq)
+5. [TDB](./tdb)
 
 ## 学习资料汇总
 
