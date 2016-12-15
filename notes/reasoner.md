@@ -18,14 +18,14 @@
     Reasoner reasoner = RDFSReasonerFactory.theInstance().create(null);
     ```
     
-![完整示例](../inference/ReasonerExample.java)
+[完整示例](../inference/ReasonerExample.java)
 
 ## 2. Reasoner参数设置
 
 ## 3. OWL Reasoner
 
 
-![完整示例](../inference/OWLReasonerExample.java)
+[完整示例](../inference/OWLReasonerExample.java)
 
 ## 4. Rule Engine
 
@@ -48,6 +48,6 @@ Jena中包含了Rule Engine(规则引擎)，它是实现RDFS和OWL推理器的�
 
 ### 4.5 示例
 
-![完整示例](../inference/GenericRuleReasonerExample.java)
+[完整示例](../inference/GenericRuleReasonerExample.java)
 
 

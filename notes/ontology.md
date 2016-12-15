@@ -11,7 +11,7 @@
 Jena通过model包中的ModelFactory创建本体模型，ModelFactory是Jena提供用来创建各种模型的类，在类中定义了具体实现模型的成员数据以及创建模型的二十多种方法。一个最简单的创建本体模型的语句如下：
 
 
-```java
+```
 OntModel ontModel = ModelFactory.createOntologyModel()
 ```
 
@@ -68,9 +68,7 @@ OntoClass对概念之间的各种关系都有相应的定义方法，典型的�
 
 所有本体API中用于表示本体的类继承自OntResource，这样就可以在OntResource中放置所有类公用的功能，并可以为一般的方法设置通用的返回值。Java接口OntResource扩展了Jena的RDF资源接口，所以任何可以接受资源或者RDFNode的方法都可以接受OntResource，并且也就可以接受任何其他本体值。
 
-![完整示例](../ontology/Basis.java)
-
-## 5. Reason
+[完整示例](../ontology/Basis.java)
 
 
 

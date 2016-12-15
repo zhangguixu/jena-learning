@@ -44,7 +44,14 @@ Jena inference子系统是用于实现推理的功能。具体的结构如下:
     InfModel inf = ModelFactory.createInfModel(reasoner, rdfsData);
     ```
     
-![完整示例](../inference/InferenceExample.java)
+[完整示例](../inference/InferenceExample.java)
+
+InfModel的本质是根据reasoner和data合成新的全面的rdf数据。注意两点：
+
+1. 推理计算发生的时刻出现在结合reasoner和data返回新的RDF数据
+2. 生成InfModel之后，后续的查询就仅仅是普通的查询。
+
+我们在[示例](../inference/InfModelStore.java)中，将reasoner和data结合，生成的InfModel存储到文件`infmodel.ttl`中，打开文件可以看到本来就几条三元组数据被加上规则推理运算之后，扩充成了很多三元组数据。之后，我们通过读取`infmodel.ttl`文件，直接进行查询，就可以获取结果。
 
 ## 3. InfModel的属性方法
 

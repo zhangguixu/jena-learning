@@ -2,7 +2,6 @@ package tdb;
 
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.tdb.TDB;
 import org.apache.jena.tdb.TDBFactory;
 
