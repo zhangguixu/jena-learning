@@ -6,9 +6,10 @@
 
 ## 概述
 
-1. [rdf](./notes/rdf.md)
+1. rdf
 
-    * [rdf graph](./notes/rdf-graph.md)
+    * [RDF基础知识](./notes/rdf.md)
+    * [RDF API](./notes/rdf-jena.md)
 
 2. Ontology
 
