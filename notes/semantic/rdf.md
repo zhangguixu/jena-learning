@@ -27,7 +27,7 @@ RDF采用三元组（Triple）集合的形式构建Web数据的语义描述模�
 1. 节点：主体\客体
 2. 弧：谓词
 
-![rdf-graph.jpg](../images/rdf-graph.jpg)
+![rdf-graph.jpg](../../images/rdf-graph.jpg)
 
 ## 2. RDF的数据模型
 
@@ -164,10 +164,18 @@ N-Triples的多图扩展，四元组，在一行中加入第4个元素，捕捉�
 
 RDF使用XML编写，通过XML，RDF信息可以轻易地在使用不同类型的操作系统和应用程序的计算机之间进行交换。如下，一个简单的rdf文件内容示例。
 
-![rdf-example](../images/rdf-example.png)
+![rdf-example](../../images/rdf-example.png)
 
 本图是有W3C的一个在线工具[Validator](http://www.w3.org/RDF/Validator/)生成的。
 
 ## 4. RDF数据的查询
 
+目前无论是研究还是工程，都是以W3C的推出的SPARQL标准作为RDF数据的查询语言。
+
+[SPARQL]()
+
 ## 5. RDF数据的存储
+
+* 有基于关系型数据库的存储方案
+* 有基于NoSQL的存储方案
+* 有Native RDF database，即原生支持存储三元组的RDF数据库，例如Jena中的TDB就是。

@@ -1,22 +1,37 @@
-# Jena 学习
+# 语义技术与Jena框架
 
-## Jena总体结构
+## Jena简介
+
+Jena是一个免费的、开源的Java平台上语义网开发框架。最初是由惠普实验室(HPL)的BrianMcBride开发，后来Jena称为Apache开源项目之一。
 
 ![jena](./images/jena.png)
 
-## 概述
+结合整体架构图和Jena的官方文档，可以看到Jena框架共分为几大模块：
 
-1. rdf
+* RDF API（RDF模型操作相关）
+* Ontology API（OWL本体模型操作相关）
+* ARQ（SPARQL标准的实现）
+* Inference API（本体推理的实现）
+* TDB（RDF数据的存储数据库）
 
-    * [RDF基础知识](./notes/rdf.md)
-    * [RDF API](./notes/rdf-jena.md)
+此外Jena还提供了非常实用的命令行工具（例如SPARQL查询、批量导入RDF数据等）和一个基于Jena框架构建的Web应用程序Fuseki。
 
-2. Ontology
+*学习Jena框架，一定要结合对于的语义技术的知识，这样才能更加快速地上手。*
 
-    * [owl](./notes/owl.md)
-    * [Protégé](./notes/protege.md)
+## Jena框架的各个模块
+
+1. RDF API
+
+    * [RDF简介](./semantic/rdf.md)
+    * [RDF API使用示例](./jena/rdf.md)
+
+2. Ontology API
+
+    * [owl](./notes/semantic/owl.md)
+    * [Protégé](./notes/tools/protege.md)
+    * [Ontology API](./notes/jena/ontology.md)
     
-3. Inference subsystem
+3. Inference API
 
     * [inference](./notes/inference.md)
     * [reasoner](./notes/reasoner.md)

@@ -22,13 +22,13 @@ OWL提供三种子语言（语言表达能力逐渐增强）：
 
 OWL Lite主要包含以下关系描述：
 
-![owl lite](../images/owl-01.png)
+![owl lite](../../images/owl-01.png)
 
 可以看到这些关系术语都是很贴近计算机编程的，例如类、属性、数据类型等等。
 
 ### 1.3 OWL DL和OWL Full纲要
 
-![owl dl & owl](../images/owl-02.png)
+![owl dl & owl](../../images/owl-02.png)
 
 ## 2. OWL Lite的术语描述
 

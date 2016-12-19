@@ -13,7 +13,7 @@ Protégé是一个开源智能系统本体编辑和知识获取框架，包括�
 
 在5.0.0版本的，有以下组成部分（跟owl一致）：
 
-![protege-01](../images/protege-01.png)
+![protege-01](../../images/protege-01.png)
 
 
 * entities 定义简写
@@ -26,25 +26,25 @@ Protégé是一个开源智能系统本体编辑和知识获取框架，包括�
 
 以创建本体`Creature`为例子。
 
-![creature.jpg](../images/creature.jpg)
+![creature.jpg](../../images/creature.jpg)
 
 先点击`Classes`，然后在edit->create new，创建一个类`Creature`。这个就是所谓的`Domain Specific root class`.
 
-![protege-02](../images/protege-02.png)
+![protege-02](../../images/protege-02.png)
 
 然后在edit->create child，创建两个Creature的子类Plant和Animal
 
-![protege-03](../images/protege-03.png)
+![protege-03](../../images/protege-03.png)
 
 全部建立完成之后，点击OWLViz，就可以看到整体效果
 
-![protege-04](../images/protege-04.png)
+![protege-04](../../images/protege-04.png)
 
 创建结束之后，我们可以将这个本体导出，在file->save as
 
-![protege-05](../images/protege-05.png)
+![protege-05](../../images/protege-05.png)
 
-我们将这个作为数据，放入到[data](../data)文件夹中，可以作为学习jena的ontology api的数据来源。
+我们将这个作为数据，放入到[data](../../data)文件夹中，可以作为学习jena的ontology api的数据来源。
 
 
 
