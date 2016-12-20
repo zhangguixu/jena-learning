@@ -36,16 +36,19 @@ Jena是一个免费的、开源的Java平台上语义网开发框架。最初是
     * [inference](./notes/inference.md)
     * [reasoner](./notes/reasoner.md)
 
-4. [ARQ](./notes/arq.md)
-5. [Fuseki](./notes/fuseki.md)
-6. [SPARQL](./notes/sparql.md)
+4.  ARQ
 
-    * [w3c sparql query 2013文档翻译](./notes/sparql/)
+    * [SPARQL](./notes/sparql)
+    * [ARQ](./notes/jena/arq.md)
 
-7. [TDB](./notes/tdb.md)
+5. [TDB](./notes/tdb.md)
 
     * [TDB Assembler](./notes/tdb-assember.md)
     * [TDB Dynamic Datasets](./notes/tdb-dynamic-dataset.md)
+
+## Fuseki
+
+[Fuseki](./notes/fuseki.md)
 
 ## Jena的整体web流程框架
 

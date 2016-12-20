@@ -96,7 +96,7 @@ sparql 1.1查询有新增了
 
 在SPARQL语言中，SELECT查询的返回结果包含一组从变量到RDF项（RDF terms）的映射，通常以表格的方式表达。
 
-![sparql-results-table.png](../images/sparql-results-table.png)
+![sparql-results-table.png](../../images/sparql-results-table.png)
 
 为了以机器可读的方式交换这些查询结果，SPARQL支持四种常见的交换格式：
 
@@ -105,7 +105,7 @@ sparql 1.1查询有新增了
 * CSV
 * TSV
 
-![sparql-results-json.png](../images/sparql-results-json.png)
+![sparql-results-json.png](../../images/sparql-results-json.png)
 
 
 ### 5. SPARQL 1.1 联邦查询(Federated Query)
@@ -148,7 +148,7 @@ WHERE {
 
 就会返回
 
-![sparql-entailment.png](../images/sparql-entailment.png)
+![sparql-entailment.png](../../images/sparql-entailment.png)
 
 ### 7. 更新语言
 
@@ -169,7 +169,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 INSERT DATA { <http://www.example.org/alice#me> foaf:knows [ foaf:name "Dorothy" ]. } ;
 ```
 
-![sparql-insert.png](../images/sparql-insert.png)
+![sparql-insert.png](../../images/sparql-insert.png)
 
 ### 8. SPARQL 1.1 协议
 
