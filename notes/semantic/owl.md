@@ -1,14 +1,16 @@
 # OWL简介
 
-## 1. 概述
+[owl官方标准文档](https://www.w3.org/TR/2004/REC-owl-features-20040210/)
 
-[owl](https://www.w3.org/TR/2004/REC-owl-features-20040210/)
+## 1. 本体
 
-OWL是一种本体描述语言，用于描述文档的信息供应用程序理解和使用。它能够明确地表示一个概念（term）的意义和概念之间的关系。
+`本体（notes.ontology）`指的就是概念和概念之间的关系。本体的目标是获取相关的领域知识，提供对该领域知识的共同理解，确定该领域内共同认可的词汇，并从不同层次的形式化模式上给出这些词汇(术语)和词汇间相互关系的明确定义。
 
-`本体（notes.ontology）`指的就是这些术语的表示和术语之间的关系。
+## 2. 本体语言OWL
 
-### 1.1 OWL的子语言
+
+
+### 2.1 OWL的子语言
 
 OWL提供三种子语言（语言表达能力逐渐增强）：
 
@@ -18,7 +20,25 @@ OWL提供三种子语言（语言表达能力逐渐增强）：
 
 这三种子语言是包含关系，分别是OWL Full>OWL DL>OWL Lite，OWL Full是最大的集合。
 
-### 1.2 OWL Lite纲要
+### 2.2 OWL基础词汇
+
+在OWL中，包含着一些基础的词汇，这些在构建本体的时候非常有用。
+
+|词汇|作用|
+|:--|:--|
+|owl:Ontology|声明一个本体|
+|owl:Class|定义一个类|
+|rdfs:subClassOf|定义一个类的子类|
+|owl:Thing|内置的类，作为所有类的父类|
+|owl:ObjectProperty|定义对象属性|
+|rdfs:domain|定义属性的定义域|
+|owl:DatatypeProperty|定义数值类型的属性|
+|rdfs:range|定义属性的值域|
+|owl:FunctionalProperty|定义函数类型的属性|
+|owl:inverseOf|表示两个属性是互逆|
+|rdfs:ID|定义所描述概念的名称|
+
+### 2.3 OWL Lite纲要
 
 OWL Lite主要包含以下关系描述：
 
@@ -26,17 +46,17 @@ OWL Lite主要包含以下关系描述：
 
 可以看到这些关系术语都是很贴近计算机编程的，例如类、属性、数据类型等等。
 
-### 1.3 OWL DL和OWL Full纲要
+### 2.4 OWL DL和OWL Full纲要
 
 ![owl dl & owl](../../images/owl-02.png)
 
-## 2. OWL Lite的术语描述
+## 3. OWL Lite的术语描述
 
 简介关系描述的具体含义
 
 TBD).
 
-## 2. 本体描述文件
+## 4. 本体描述文件
 
 [owl guide](https://www.w3.org/TR/owl-guide/)
 
